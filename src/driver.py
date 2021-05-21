@@ -1,5 +1,6 @@
 from passage.passage import get_esv_text
 from config import ApiConfig
+from gui.gui import start_widget
 from Levenshtein import ratio
 import random
 from util import clean
@@ -12,7 +13,7 @@ if __name__ == "__main__":
         cfg = yaml.load(config_file,Loader=FullLoader)
         api_url = cfg['API_URL']
         api_key = cfg['API_KEY']
-
+        
         api_config = ApiConfig(api_key,api_url)
 
         passage_name = input('Enter the passage you want to Memorize: ')
